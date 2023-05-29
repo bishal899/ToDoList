@@ -1,3 +1,5 @@
+
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
@@ -5,7 +7,8 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
-mongoose.connect("mongodb+srv://bsardar980:TEST123@cluster1.0b9bbwv.mongodb.net/todolistDB");
+const mongo_server = MONGO_SERVER;
+mongoose.connect("mongodb+srv://mongo_server/todolistDB");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
