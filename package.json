@@ -8,9 +8,6 @@
   },
   "author": "Bishal",
   "license": "ISC",
-  "engine": {
-    "node": ">=14.20.1"
-  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
