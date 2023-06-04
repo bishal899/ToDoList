@@ -8,7 +8,7 @@ const _ = require("lodash");
 
 const app = express();
 const mongo_server = process.env.MONGO_SERVER;
-mongoose.connect(mongo_server);
+mongoose.connect('mongo_server');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
