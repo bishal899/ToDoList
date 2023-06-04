@@ -7,8 +7,8 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 
 const app = express();
-const mongo_server = MONGO_SERVER;
-mongoose.connect("mongodb+srv://mongo_server/todolistDB");
+const mongo_server = process.env.MONGO_SERVER;
+mongoose.connect(mongo_server);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
